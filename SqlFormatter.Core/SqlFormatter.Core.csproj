@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9884EA5F-ED6B-4F5D-A4C7-794F45FD96B3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SqlFormatter.Core</RootNamespace>
+    <AssemblyName>SqlFormatter.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Interfaces\IFormattor.cs" />
+    <Compile Include="Interfaces\IReader.cs" />
+    <Compile Include="Interfaces\ITokenIdentifier.cs" />
+    <Compile Include="Interfaces\ITokenImprover.cs" />
+    <Compile Include="Interfaces\ITokenizer.cs" />
+    <Compile Include="Interfaces\IWriter.cs" />
+    <Compile Include="Rules\AsFormatingRule.cs" />
+    <Compile Include="Rules\BeginFormatingRule.cs" />
+    <Compile Include="Rules\ByFormatingRule.cs" />
+    <Compile Include="Rules\ColumnFormatingRule.cs" />
+    <Compile Include="Rules\ComaFormatingRule.cs" />
+    <Compile Include="Rules\CommitRollbackFormatingRule.cs" />
+    <Compile Include="Rules\CreateFormatingRule.cs" />
+    <Compile Include="Rules\DeclareTypeFormatingRule.cs" />
+    <Compile Include="Rules\DefaultFormatingRule.cs" />
+    <Compile Include="Rules\ElseFormatingRule.cs" />
+    <Compile Include="Rules\EndFormatingRule.cs" />
+    <Compile Include="Rules\EndOfLineFormatingRule.cs" />
+    <Compile Include="Rules\FormatingRule.cs" />
+    <Compile Include="Rules\FromFormatingRule.cs" />
+    <Compile Include="Rules\GoFormatingRule.cs" />
+    <Compile Include="Rules\GroupFormatingRule.cs" />
+    <Compile Include="Rules\IfFormatingRule.cs" />
+    <Compile Include="Rules\InnerFormatingRule.cs" />
+    <Compile Include="Rules\InsertFormatingRule.cs" />
+    <Compile Include="Rules\IntoFormatingRule.cs" />
+    <Compile Include="Rules\IsolationLevelFormatingRule.cs" />
+    <Compile Include="Rules\JoinFormatingRule.cs" />
+    <Compile Include="Rules\LogicalOperatorFormatingRule.cs" />
+    <Compile Include="Rules\NumberFormatingRule.cs" />
+    <Compile Include="Rules\OnFormatingRule.cs" />
+    <Compile Include="Rules\OrderByFormatingRule.cs" />
+    <Compile Include="Rules\ParenthesisCloseFormatingRule.cs" />
+    <Compile Include="Rules\ParenthesisOpenFormatingRule.cs" />
+    <Compile Include="Rules\SelectFormatingRule.cs" />
+    <Compile Include="Rules\SetFormatingRule.cs" />
+    <Compile Include="Rules\StarFormatingRule.cs" />
+    <Compile Include="Rules\UpdateFormatingRule.cs" />
+    <Compile Include="Rules\ValuesFormatingRule.cs" />
+    <Compile Include="Rules\VariableFormatingRule.cs" />
+    <Compile Include="Rules\WhereFormatingRule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\WhileFormatingRule.cs" />
+    <Compile Include="Strategies\FileReader.cs" />
+    <Compile Include="Strategies\FileWriter.cs" />
+    <Compile Include="Strategies\SqlFormattor.cs" />
+    <Compile Include="Strategies\SqlFormattorProcessor.cs" />
+    <Compile Include="Strategies\SqlTokenIdentifier.cs" />
+    <Compile Include="Strategies\SqlTokenImprover.cs" />
+    <Compile Include="Strategies\SqlTokenizer.cs" />
+    <Compile Include="Models\Token.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
