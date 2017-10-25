@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using SqlFormatter.Core.Models;
-using SqlFormatter.Core.Strategies;
 
 namespace SqlFormatter.Core.Rules
 {

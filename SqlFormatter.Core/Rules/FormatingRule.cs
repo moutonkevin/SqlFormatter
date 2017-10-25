@@ -6,14 +6,14 @@ namespace SqlFormatter.Core.Rules
 {
     public abstract class FormatingRule
     {
-        public string Before { get; set; }
-        public string After { get; set; }
-
         protected FormatingRule()
         {
             Before = Constants.NoIndentation;
             After = Constants.SmallIndentation;
         }
+
+        public string Before { get; set; }
+        public string After { get; set; }
 
         protected string IndentLine(string indentation, int indentationIncrement)
         {
@@ -23,10 +23,8 @@ namespace SqlFormatter.Core.Rules
 
                 indentationString.Append(indentation);
 
-                for (int i = 0; i < indentationIncrement; i++)
-                {
+                for (var i = 0; i < indentationIncrement; i++)
                     indentationString.Append(Constants.MediumIndentation);
-                }
 
                 return indentationString.ToString();
             }
@@ -38,9 +36,7 @@ namespace SqlFormatter.Core.Rules
         {
             if (relativePosition >= tokens.Count ||
                 relativePosition < 0)
-            {
                 return null;
-            }
 
             return tokens[relativePosition];
         }

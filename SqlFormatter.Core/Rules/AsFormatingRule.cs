@@ -16,9 +16,7 @@ namespace SqlFormatter.Core.Rules
 
             if (previousToken?.Type == SqlTokenTypes.VariableName ||
                 previousToken?.Type == SqlTokenTypes.TableName)
-            {
                 Before = IndentLine(Constants.NoIndentation, indentationIncremental);
-            }
 
             return $"{Before}{currentToken.Value}{After}";
         }

@@ -33,9 +33,7 @@ namespace SqlFormatter.Core.Strategies
                 sqlToken.Type == SqlTokenTypes.KeywordSet ||
                 sqlToken.Type == SqlTokenTypes.KeywordValues ||
                 sqlToken.Type == SqlTokenTypes.DataType)
-            {
                 sqlToken.Value = sqlToken.Value.ToUpperInvariant();
-            }
         }
     }
 }

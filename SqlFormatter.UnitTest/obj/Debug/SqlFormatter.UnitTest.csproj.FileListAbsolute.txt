@@ -1,0 +1,6 @@
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\SqlFormatter.UnitTest.dll
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\SqlFormatter.UnitTest.pdb
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\obj\Debug\SqlFormatter.UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\obj\Debug\SqlFormatter.UnitTest.dll
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\obj\Debug\SqlFormatter.UnitTest.pdb

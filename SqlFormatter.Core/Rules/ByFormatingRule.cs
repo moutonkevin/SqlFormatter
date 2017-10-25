@@ -13,12 +13,9 @@ namespace SqlFormatter.Core.Rules
 
             if (previousToken?.Type == SqlTokenTypes.KeywordGroup ||
                 previousToken?.Type == SqlTokenTypes.KeywordOrder)
-            {
                 Before = Constants.NoIndentation;
-            }
 
             return $"{Before}{currentToken.Value}{After}";
         }
     }
 }
-

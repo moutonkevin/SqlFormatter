@@ -3,7 +3,7 @@ using SqlFormatter.Core.Models;
 
 namespace SqlFormatter.Core.Rules
 {
-    class OrderByFormatingRule : FormatingRule
+    internal class OrderByFormatingRule : FormatingRule
     {
         public override string GetFormat(int currentTokenPosition, List<Token> tokens, int indentationIncremental)
         {

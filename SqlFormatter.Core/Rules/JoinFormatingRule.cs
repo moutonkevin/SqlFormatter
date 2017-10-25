@@ -12,13 +12,9 @@ namespace SqlFormatter.Core.Rules
             var previousToken = GetTokenFromPosition(tokens, currentTokenPosition - 1);
 
             if (previousToken?.Type == SqlTokenTypes.KeywordInner)
-            {
                 Before = Constants.NoIndentation;
-            }
             else
-            {
                 Before = IndentLine(Constants.NewLine, indentationIncremental);
-            }
 
             return $"{Before}{currentToken.Value}{After}";
         }

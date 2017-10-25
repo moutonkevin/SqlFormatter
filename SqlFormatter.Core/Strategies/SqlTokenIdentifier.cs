@@ -62,62 +62,48 @@ namespace SqlFormatter.Core.Strategies
     {
         private readonly Dictionary<Regex, SqlTokenTypes> _tokenTypes = new Dictionary<Regex, SqlTokenTypes>
         {
-            { new Regex(@"^VALUES", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordValues } ,
-            { new Regex(@"^SET", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordSet } ,
-            { new Regex(@"^INSERT", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordInsert } ,
-            { new Regex(@"^UPDATE", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordUpdate } ,
-            { new Regex(@"^WHILE", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordWhile } ,
-            { new Regex(@"^INTO", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordInto } ,
-            { new Regex(@"^IF", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordIf } ,
-            { new Regex(@"^ELSE", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordElse } ,
-            { new Regex(@"^GO", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordGo } ,
-            { new Regex(@"^USE", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordUse } ,
-            { new Regex(@"^CREATE", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordCreate } ,
-            { new Regex(@"^(PROCEDURE|PROC)", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordProcedure } ,
-            { new Regex(@"^BEGIN", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordBegin } ,
-            { new Regex(@"^END", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordEnd } ,
-            { new Regex(@"^SELECT", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordSelect } ,
-            { new Regex(@"^FROM", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordFrom } ,
-            { new Regex(@"^WHERE", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordWhere } ,
-            { new Regex(@"^TOP", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordTop } ,
-            { new Regex(@"^AS", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordAs } ,
-            { new Regex(@"^ON", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordOn } ,
-            { new Regex(@"^ORDER", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordOrder } ,
-            { new Regex(@"^BY", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordBy } ,
-            { new Regex(@"^GROUP", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordGroup } ,
-            { new Regex(@"^INNER", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordInner } ,
-            { new Regex(@"^JOIN", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordJoin } ,
-            { new Regex(@"^DECLARE", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordDeclare } ,
-            { new Regex(@"(ROWLOCK|NOLOCK)", RegexOptions.IgnoreCase), SqlTokenTypes.IsolationLevel } ,
-            { new Regex(@"(COMMIT|ROLLBACK)", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordCommitRollback } ,
-            { new Regex(@"^;", RegexOptions.IgnoreCase), SqlTokenTypes.EndOfLine } ,
-            { new Regex(@"^\d*$", RegexOptions.IgnoreCase), SqlTokenTypes.Number } ,
-            { new Regex(@"[@][a-z0-9A-Z]*", RegexOptions.IgnoreCase), SqlTokenTypes.VariableName } ,
-            { new Regex(@"\*", RegexOptions.IgnoreCase), SqlTokenTypes.Star } ,
-            { new Regex(@",", RegexOptions.IgnoreCase), SqlTokenTypes.Coma },
-            { new Regex(@"^(XML|BIT|INT|VARCHAR\(\d*|MAX\)|VARCHAR|NVARCHAR)", RegexOptions.IgnoreCase), SqlTokenTypes.DataType },
-            { new Regex(@"\(", RegexOptions.IgnoreCase), SqlTokenTypes.ParenthesisOpen } ,
-            { new Regex(@"\)", RegexOptions.IgnoreCase), SqlTokenTypes.ParenthesisClose } ,
-            { new Regex(@"^(AND|OR)", RegexOptions.IgnoreCase), SqlTokenTypes.LogicalOperator },
-            { new Regex(@"^(\+|\-|\*|\/|\=|\<|\>)", RegexOptions.IgnoreCase), SqlTokenTypes.MathematicalOperators }
-        };
-
-        private SqlTokenTypes GetTokenTypeFromValue(string tokenValue)
-        {
-            foreach (var tokenType in _tokenTypes)
+            {new Regex(@"^VALUES", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordValues},
+            {new Regex(@"^SET", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordSet},
+            {new Regex(@"^INSERT", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordInsert},
+            {new Regex(@"^UPDATE", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordUpdate},
+            {new Regex(@"^WHILE", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordWhile},
+            {new Regex(@"^INTO", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordInto},
+            {new Regex(@"^IF", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordIf},
+            {new Regex(@"^ELSE", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordElse},
+            {new Regex(@"^GO", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordGo},
+            {new Regex(@"^USE", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordUse},
+            {new Regex(@"^CREATE", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordCreate},
+            {new Regex(@"^(PROCEDURE|PROC)", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordProcedure},
+            {new Regex(@"^BEGIN", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordBegin},
+            {new Regex(@"^END", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordEnd},
+            {new Regex(@"^SELECT", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordSelect},
+            {new Regex(@"^FROM", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordFrom},
+            {new Regex(@"^WHERE", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordWhere},
+            {new Regex(@"^TOP", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordTop},
+            {new Regex(@"^AS", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordAs},
+            {new Regex(@"^ON", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordOn},
+            {new Regex(@"^ORDER", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordOrder},
+            {new Regex(@"^BY", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordBy},
+            {new Regex(@"^GROUP", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordGroup},
+            {new Regex(@"^INNER", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordInner},
+            {new Regex(@"^JOIN", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordJoin},
+            {new Regex(@"^DECLARE", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordDeclare},
+            {new Regex(@"(ROWLOCK|NOLOCK)", RegexOptions.IgnoreCase), SqlTokenTypes.IsolationLevel},
+            {new Regex(@"(COMMIT|ROLLBACK)", RegexOptions.IgnoreCase), SqlTokenTypes.KeywordCommitRollback},
+            {new Regex(@"^;", RegexOptions.IgnoreCase), SqlTokenTypes.EndOfLine},
+            {new Regex(@"^\d*$", RegexOptions.IgnoreCase), SqlTokenTypes.Number},
+            {new Regex(@"[@][a-z0-9A-Z]*", RegexOptions.IgnoreCase), SqlTokenTypes.VariableName},
+            {new Regex(@"\*", RegexOptions.IgnoreCase), SqlTokenTypes.Star},
+            {new Regex(@",", RegexOptions.IgnoreCase), SqlTokenTypes.Coma},
             {
-                if (tokenType.Key.IsMatch(tokenValue))
-                {
-                    Console.WriteLine($"Its a match! SqlTokenTypes:[{tokenType.Value}] Value:[{tokenValue}]");
-
-                    return tokenType.Value;
-                }
-            }
-
-            Console.WriteLine($"Unknown SqlTokenTypes:[{SqlTokenTypes.Unknown}] Value:[{tokenValue}]");
-
-            return SqlTokenTypes.Unknown;
-        }
+                new Regex(@"^(XML|BIT|INT|VARCHAR\(\d*|MAX\)|VARCHAR|NVARCHAR)", RegexOptions.IgnoreCase),
+                SqlTokenTypes.DataType
+            },
+            {new Regex(@"\(", RegexOptions.IgnoreCase), SqlTokenTypes.ParenthesisOpen},
+            {new Regex(@"\)", RegexOptions.IgnoreCase), SqlTokenTypes.ParenthesisClose},
+            {new Regex(@"^(AND|OR)", RegexOptions.IgnoreCase), SqlTokenTypes.LogicalOperator},
+            {new Regex(@"^(\+|\-|\*|\/|\=|\<|\>)", RegexOptions.IgnoreCase), SqlTokenTypes.MathematicalOperators}
+        };
 
         public object IdentifyTokens(object tokens)
         {
@@ -128,7 +114,7 @@ namespace SqlFormatter.Core.Strategies
             {
                 var tokenType = GetTokenTypeFromValue(token);
 
-                identifiedTokens.Add(new Token() {Value = token, Type = tokenType});
+                identifiedTokens.Add(new Token {Value = token, Type = tokenType});
             }
 
             IdentifyUnknownTokens(identifiedTokens);
@@ -136,13 +122,26 @@ namespace SqlFormatter.Core.Strategies
             return identifiedTokens;
         }
 
+        private SqlTokenTypes GetTokenTypeFromValue(string tokenValue)
+        {
+            foreach (var tokenType in _tokenTypes)
+                if (tokenType.Key.IsMatch(tokenValue))
+                {
+                    Console.WriteLine($"Its a match! SqlTokenTypes:[{tokenType.Value}] Value:[{tokenValue}]");
+
+                    return tokenType.Value;
+                }
+
+            Console.WriteLine($"Unknown SqlTokenTypes:[{SqlTokenTypes.Unknown}] Value:[{tokenValue}]");
+
+            return SqlTokenTypes.Unknown;
+        }
+
         private Token GetTokenFromPosition(List<Token> tokens, int relativePosition)
         {
             if (relativePosition >= tokens.Count ||
                 relativePosition < 0)
-            {
                 return null;
-            }
 
             return tokens[relativePosition];
         }
@@ -158,8 +157,8 @@ namespace SqlFormatter.Core.Strategies
                 var previousToken = GetTokenFromPosition(tokens, counter - 1);
 
                 if (currentToken.Type == SqlTokenTypes.Unknown &&
-                    (nextToken?.Type == SqlTokenTypes.Coma 
-                    || nextToken?.Type == SqlTokenTypes.KeywordFrom))
+                    (nextToken?.Type == SqlTokenTypes.Coma
+                     || nextToken?.Type == SqlTokenTypes.KeywordFrom))
                 {
                     currentToken.Type = SqlTokenTypes.Column;
 

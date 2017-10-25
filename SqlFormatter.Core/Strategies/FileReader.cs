@@ -7,7 +7,7 @@ namespace SqlFormatter.Core.Strategies
     {
         public string GetAll(object key)
         {
-            return File.ReadAllText((string)key);
+            return File.ReadAllText((string) key);
         }
     }
 }

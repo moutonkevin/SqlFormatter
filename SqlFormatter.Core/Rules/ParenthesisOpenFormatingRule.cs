@@ -1,6 +1,6 @@
 ﻿using System;
-using SqlFormatter.Core.Models;
 using System.Collections.Generic;
+using SqlFormatter.Core.Models;
 using SqlFormatter.Core.Strategies;
 
 namespace SqlFormatter.Core.Rules
@@ -26,12 +26,14 @@ namespace SqlFormatter.Core.Rules
                 After = Constants.NoIndentation;
             }
             else if (previousToken?.Type == SqlTokenTypes.KeywordWhere ||
-                previousToken?.Type == SqlTokenTypes.LogicalOperator)
+                     previousToken?.Type == SqlTokenTypes.LogicalOperator)
             {
-                Console.WriteLine($"ParenthesisOpenFormatingRule: special indentation for Previous[{previousToken.Type} {previousToken.Value}] Current[{currentToken.Type} {currentToken.Value}]");
+                Console.WriteLine(
+                    $"ParenthesisOpenFormatingRule: special indentation for Previous[{previousToken.Type} {previousToken.Value}] Current[{currentToken.Type} {currentToken.Value}]");
 
                 Before = IndentLine($"{Constants.NewLine}{Constants.MediumIndentation}", indentationIncremental);
-                After = IndentLine($"{Constants.NewLine}{Constants.MediumIndentation}{Constants.MediumIndentation}", indentationIncremental);
+                After = IndentLine($"{Constants.NewLine}{Constants.MediumIndentation}{Constants.MediumIndentation}",
+                    indentationIncremental);
             }
 
             return $"{Before}{currentToken.Value}{After}";

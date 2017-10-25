@@ -1,27 +1,46 @@
 ﻿using System;
-using SqlFormatter.Core.Strategies;
+using Autofac;
 using SqlFormatter.Core.Interfaces;
+using SqlFormatter.Core.Strategies;
 
 namespace SqlFormatter
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static IContainer Container { get; set; }
+
+        private static void Register()
         {
-            IReader reader = new FileReader();
-            IWriter writer = new FileWriter();
-            ITokenizer tokenizer = new SqlTokenizer();
-            ITokenIdentifier tokenIdentifier = new SqlTokenIdentifier();
-            ITokenImprover tokenImprover = new SqlTokenImprover();
-            IFormattor formattor = new SqlFormattor();
-            IFormattor formattorProcessor = new SqlFormattorProcessor(tokenizer, tokenIdentifier, formattor, tokenImprover);
+            var builder = new ContainerBuilder();
+
+            builder.RegisterType<FileReader>().As<IReader>();
+            builder.RegisterType<FileWriter>().As<IWriter>();
+            builder.RegisterType<SqlTokenizer>().As<ITokenizer>();
+            builder.RegisterType<SqlTokenIdentifier>().As<ITokenIdentifier>();
+            builder.RegisterType<SqlTokenImprover>().As<ITokenImprover>();
+            builder.RegisterType<SqlFormattor>().Keyed<IFormattor>("SqlFormattor");
+            builder.RegisterType<SqlFormattorProcessor>().Keyed<IFormattor>("SqlFormattorProcessor");
+
+            Container = builder.Build();
+        }
+
+        private static void Main(string[] args)
+        {
+            Register();
 
             var inputFilePath = @"C:\Users\kevin.mouton\Desktop\test.sql";
             var outputFilePath = @"C:\Users\kevin.mouton\Desktop\test_result.sql";
 
-            var fileContent  = reader.GetAll(inputFilePath);
-            var formattedContent = formattorProcessor.Format(fileContent);
-            writer.Save(formattedContent, outputFilePath);
+            using (var scope = Container.BeginLifetimeScope())
+            {
+                var formattor = scope.ResolveKeyed<IFormattor>("SqlFormattorProcessor");
+                var reader = scope.Resolve<IReader>();
+                var writer = scope.Resolve<IWriter>();
+
+                var fileContent = reader.GetAll(inputFilePath);
+                var formattedContent = formattor.Format(fileContent);
+                writer.Save(formattedContent, outputFilePath);
+            }
 
             Console.ReadKey();
         }

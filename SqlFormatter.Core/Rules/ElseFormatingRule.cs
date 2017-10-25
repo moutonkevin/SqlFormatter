@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using SqlFormatter.Core.Models;
 
 namespace SqlFormatter.Core.Rules
 {
-    class ElseFormatingRule : FormatingRule
+    internal class ElseFormatingRule : FormatingRule
     {
         public override string GetFormat(int currentTokenPosition, List<Token> tokens, int indentationIncremental)
         {

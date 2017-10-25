@@ -4,7 +4,7 @@ using SqlFormatter.Core.Strategies;
 
 namespace SqlFormatter.Core.Rules
 {
-    class ParenthesisCloseFormatingRule : FormatingRule
+    internal class ParenthesisCloseFormatingRule : FormatingRule
     {
         public ParenthesisCloseFormatingRule()
         {
@@ -20,7 +20,7 @@ namespace SqlFormatter.Core.Rules
             var previouspreviouspreviousToken = GetTokenFromPosition(tokens, currentTokenPosition - 3);
             var nextToken = GetTokenFromPosition(tokens, currentTokenPosition + 1);
 
-            if ((previouspreviouspreviousToken?.Type == SqlTokenTypes.DataType) ||
+            if (previouspreviouspreviousToken?.Type == SqlTokenTypes.DataType ||
                 nextToken?.Type == SqlTokenTypes.KeywordBegin ||
                 previousToken?.Type == SqlTokenTypes.IsolationLevel ||
                 previousToken?.Type == SqlTokenTypes.ParenthesisOpen)

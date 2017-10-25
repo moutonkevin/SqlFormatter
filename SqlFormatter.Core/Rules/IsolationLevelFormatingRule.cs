@@ -3,7 +3,7 @@ using SqlFormatter.Core.Models;
 
 namespace SqlFormatter.Core.Rules
 {
-    class IsolationLevelFormatingRule : FormatingRule
+    internal class IsolationLevelFormatingRule : FormatingRule
     {
         public IsolationLevelFormatingRule()
         {

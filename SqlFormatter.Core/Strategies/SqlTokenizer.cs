@@ -10,9 +10,7 @@ namespace SqlFormatter.Core.Strategies
         public object Tokenize(object input)
         {
             if (input == null)
-            {
                 throw new Exception("Empty file");
-            }
 
             var tokens = Regex.Split((string) input, @"([\s,\(\);])");
 

@@ -7,7 +7,7 @@ namespace SqlFormatter.Core.Strategies
     {
         public void Save(object value, object destination)
         {
-            File.Open((string)destination, FileMode.Create, FileAccess.Write);
+            File.WriteAllText((string) destination, (string) value);
         }
     }
 }

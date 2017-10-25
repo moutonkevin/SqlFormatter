@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Autofac.Features.Indexed;
 using SqlFormatter.Core.Interfaces;
 using SqlFormatter.Core.Models;
 
@@ -7,16 +8,20 @@ namespace SqlFormatter.Core.Strategies
 {
     public class SqlFormattorProcessor : IFormattor
     {
-        private readonly ITokenizer _tokenizer;
-        private readonly ITokenIdentifier _tokenIdentifier;
         private readonly IFormattor _formattor;
+        private readonly ITokenIdentifier _tokenIdentifier;
         private readonly ITokenImprover _tokenImprover;
+        private readonly ITokenizer _tokenizer;
 
-        public SqlFormattorProcessor(ITokenizer tokenizer, ITokenIdentifier tokenIdentifier, IFormattor formattor, ITokenImprover tokenImprover)
+        public SqlFormattorProcessor(
+            ITokenizer tokenizer, 
+            ITokenIdentifier tokenIdentifier, 
+            IIndex<string,IFormattor> formattor,
+            ITokenImprover tokenImprover)
         {
             _tokenizer = tokenizer;
             _tokenIdentifier = tokenIdentifier;
-            _formattor = formattor;
+            _formattor = formattor["SqlFormattor"];
             _tokenImprover = tokenImprover;
         }
 

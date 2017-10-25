@@ -17,9 +17,7 @@ namespace SqlFormatter.Core.Rules
             var nextToken = GetTokenFromPosition(tokens, currentTokenPosition + 1);
 
             if (nextToken?.Type == SqlTokenTypes.Coma)
-            {
                 After = Constants.NoIndentation;
-            }
 
             return $"{Before}{currentToken.Value}{After}";
         }

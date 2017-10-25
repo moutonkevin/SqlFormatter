@@ -1,0 +1,6 @@
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.Core\bin\Debug\SqlFormatter.Core.dll
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.Core\bin\Debug\SqlFormatter.Core.pdb
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.Core\obj\Debug\SqlFormatter.Core.dll
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.Core\obj\Debug\SqlFormatter.Core.pdb
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.Core\bin\Debug\Autofac.dll
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.Core\bin\Debug\Autofac.xml
