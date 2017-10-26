@@ -14,4 +14,19 @@ C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlForm
 C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter\bin\Debug\Newtonsoft.Json.xml
 C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter\bin\Debug\System.Web.Http.xml
-C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter\obj\Debug\SqlFormatter.Console.csproj.SqlFormatter.exe.config
+C:\gitkevin\SqlFormatter\SqlFormatter\bin\Debug\SqlFormatter.exe.config
+C:\gitkevin\SqlFormatter\SqlFormatter\obj\Debug\SqlFormatter.exe
+C:\gitkevin\SqlFormatter\SqlFormatter\obj\Debug\SqlFormatter.pdb
+C:\gitkevin\SqlFormatter\SqlFormatter\bin\Debug\SqlFormatter.exe
+C:\gitkevin\SqlFormatter\SqlFormatter\bin\Debug\SqlFormatter.pdb
+C:\gitkevin\SqlFormatter\SqlFormatter\bin\Debug\Autofac.dll
+C:\gitkevin\SqlFormatter\SqlFormatter\bin\Debug\Newtonsoft.Json.dll
+C:\gitkevin\SqlFormatter\SqlFormatter\bin\Debug\SqlFormatter.Core.dll
+C:\gitkevin\SqlFormatter\SqlFormatter\bin\Debug\System.Net.Http.Formatting.dll
+C:\gitkevin\SqlFormatter\SqlFormatter\bin\Debug\System.Web.Http.dll
+C:\gitkevin\SqlFormatter\SqlFormatter\bin\Debug\SqlFormatter.Core.pdb
+C:\gitkevin\SqlFormatter\SqlFormatter\bin\Debug\Autofac.xml
+C:\gitkevin\SqlFormatter\SqlFormatter\bin\Debug\Newtonsoft.Json.xml
+C:\gitkevin\SqlFormatter\SqlFormatter\bin\Debug\System.Net.Http.Formatting.xml
+C:\gitkevin\SqlFormatter\SqlFormatter\bin\Debug\System.Web.Http.xml
+C:\gitkevin\SqlFormatter\SqlFormatter\obj\Debug\SqlFormatter.Console.csprojResolveAssemblyReference.cache

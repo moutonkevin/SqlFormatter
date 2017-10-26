@@ -1,0 +1,12 @@
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.AcceptanceTest\bin\Debug\SqlFormatter.AcceptanceTest.dll
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.AcceptanceTest\bin\Debug\SqlFormatter.AcceptanceTest.pdb
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.AcceptanceTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.AcceptanceTest\obj\Debug\SqlFormatter.AcceptanceTest.dll
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.AcceptanceTest\obj\Debug\SqlFormatter.AcceptanceTest.pdb
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.AcceptanceTest\obj\Debug\SqlFormatter.AcceptanceTest.csprojResolveAssemblyReference.cache
+C:\gitkevin\SqlFormatter\SqlFormatter.AcceptanceTest\bin\Debug\SqlFormatter.AcceptanceTest.dll
+C:\gitkevin\SqlFormatter\SqlFormatter.AcceptanceTest\bin\Debug\SqlFormatter.AcceptanceTest.pdb
+C:\gitkevin\SqlFormatter\SqlFormatter.AcceptanceTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\gitkevin\SqlFormatter\SqlFormatter.AcceptanceTest\obj\Debug\SqlFormatter.AcceptanceTest.csprojResolveAssemblyReference.cache
+C:\gitkevin\SqlFormatter\SqlFormatter.AcceptanceTest\obj\Debug\SqlFormatter.AcceptanceTest.dll
+C:\gitkevin\SqlFormatter\SqlFormatter.AcceptanceTest\obj\Debug\SqlFormatter.AcceptanceTest.pdb

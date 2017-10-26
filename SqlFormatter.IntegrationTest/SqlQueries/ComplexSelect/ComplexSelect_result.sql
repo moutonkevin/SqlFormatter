@@ -1,0 +1,1 @@
+﻿\n\nSELECT\n   name \nFROM customers \n   (nolock)\nINNER JOIN products \n   ON products.id = customers.id \nWHERE\n   customers.name = 'kevin' \n   and \n   (\n      products.id = 1 \n      or products.id = 2\n   )

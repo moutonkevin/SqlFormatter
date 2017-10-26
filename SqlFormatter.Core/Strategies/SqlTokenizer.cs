@@ -9,10 +9,14 @@ namespace SqlFormatter.Core.Strategies
     {
         public object Tokenize(object input)
         {
-            if (input == null)
-                throw new Exception("Empty file");
+            var content = input as string;
 
-            var tokens = Regex.Split((string) input, @"([\s,\(\);])");
+            if (string.IsNullOrWhiteSpace(content))
+            {
+                throw new Exception("Empty file");
+            }
+
+            var tokens = Regex.Split(content, @"([\s,\(\);])");
 
             tokens = tokens.Where(t => !string.IsNullOrWhiteSpace(t)).ToArray();
 

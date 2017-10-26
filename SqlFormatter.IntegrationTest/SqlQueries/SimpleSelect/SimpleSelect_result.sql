@@ -1,0 +1,1 @@
+﻿\n\nSELECT\n   name \nFROM customers \nWHERE\n   name = 'kevin' 

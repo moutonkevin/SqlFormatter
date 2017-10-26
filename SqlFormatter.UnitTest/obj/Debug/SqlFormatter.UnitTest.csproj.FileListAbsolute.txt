@@ -4,3 +4,27 @@ C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlForm
 C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\obj\Debug\SqlFormatter.UnitTest.csprojResolveAssemblyReference.cache
 C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\obj\Debug\SqlFormatter.UnitTest.dll
 C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\obj\Debug\SqlFormatter.UnitTest.pdb
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\Castle.Core.dll
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\Moq.dll
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\SqlFormatter.Core.dll
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\Autofac.dll
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\SqlFormatter.Core.pdb
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\Castle.Core.xml
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\Moq.pdb
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\Moq.xml
+C:\Users\kevin.mouton\Documents\Visual Studio 2015\Projects\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\Autofac.xml
+C:\gitkevin\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\SqlFormatter.UnitTest.dll
+C:\gitkevin\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\SqlFormatter.UnitTest.pdb
+C:\gitkevin\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\Autofac.dll
+C:\gitkevin\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\Castle.Core.dll
+C:\gitkevin\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\gitkevin\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\Moq.dll
+C:\gitkevin\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\SqlFormatter.Core.dll
+C:\gitkevin\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\SqlFormatter.Core.pdb
+C:\gitkevin\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\Autofac.xml
+C:\gitkevin\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\Castle.Core.xml
+C:\gitkevin\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\Moq.pdb
+C:\gitkevin\SqlFormatter\SqlFormatter.UnitTest\bin\Debug\Moq.xml
+C:\gitkevin\SqlFormatter\SqlFormatter.UnitTest\obj\Debug\SqlFormatter.UnitTest.csprojResolveAssemblyReference.cache
+C:\gitkevin\SqlFormatter\SqlFormatter.UnitTest\obj\Debug\SqlFormatter.UnitTest.dll
+C:\gitkevin\SqlFormatter\SqlFormatter.UnitTest\obj\Debug\SqlFormatter.UnitTest.pdb

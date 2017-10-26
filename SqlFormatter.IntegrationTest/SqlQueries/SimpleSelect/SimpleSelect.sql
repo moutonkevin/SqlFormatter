@@ -1,0 +1,1 @@
+﻿select name from customers where name = 'kevin'

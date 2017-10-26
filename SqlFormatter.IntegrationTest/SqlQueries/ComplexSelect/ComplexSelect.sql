@@ -1,0 +1,1 @@
+﻿select name from customers (nolock) inner join products on products.id = customers.id where customers.name = 'kevin' and (products.id = 1 or products.id = 2)
